@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>iMolodets board game rules</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet"> 
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header class="header-block">
+        <button class="drop-btn" onclick="mainModule.showHideMenu()"></button>
+        <h1><img alt="iMolodets rules" src="images/logo/logo-rules-dark.svg" class="title-img"></h1>
+    </header>
+    <aside>
+        <nav class="expand-menu">
+            <ul>
+                <li>
+                    <a href="#A00" class="list-item" onclick="mainModule.expandMenu(0)">
+                        <span class="list-number">01</span>OBJECT</a>
+                </li>
+
+                <li>
+                    <a href="#A01" class="list-item" onclick="mainModule.expandMenu(1)">
+                        <span class="list-number">02</span>COMPONENTS</a>
+                </li>
+
+                <li>
+                    <a href="#A02" class="list-item" onclick="mainModule.expandMenu(2)">
+                        <span class="list-number">03</span>GAME CARDS</a>
+                </li>
+
+                <li>
+                    <a href="#A03" class="list-item" onclick="mainModule.expandMenu(3)">
+                        <span class="list-number">04</span>REFERENCE CARDS</a>
+                </li>
+
+                <li>
+                    <a href="#A04" class="list-item" onclick="mainModule.expandMenu(4)">
+                        <span class="list-number">05</span>TOKENS OF VICTORY</a>
+                </li>
+                <li>
+                    <a href="#A05" class="list-item" onclick="mainModule.expandMenu(5)">
+                        <span class="list-number">06</span><p class="item-title">SETUP<span class="item-notes">(2 to 4 Players)</span></p></a>
+                </li>
+                <li>
+                    <a href="#A06" class="list-item" onclick="mainModule.expandMenu(6)">
+                        <span class="list-number">07</span><p class="item-title">HOW TO PLAY<span class="item-notes">(2 to 4 Players)</span></p></a>
+                </li>
+                <li>
+                    <a href="#A07" class="list-item" onclick="mainModule.expandMenu(7)">
+                        <span class="list-number">08</span><p class="item-title">SETUP AND PLAY<span class="item-notes">(5 to 8 players)</span></p></a>
+                </li>
+                <li class="people-menu-offline">
+                    <a href="#A08" id="arrow-item" class="list-item" onclick="mainModule.openSubMenu()">
+                        <p>
+                            <span class="list-number">09</span>ABOUT THE PEOPLE</p>
+                        <img alt="arrow image for button" class="arrow" src="images/buttons/arrowDown.png">
+                    </a>
+                    <ul  class="people-menu">
+                        <li>
+                            <a href="#A09-9" class="list-item people-list-item" onclick="mainModule.expandMenu(9)">Customer</a>
+                        </li>
+                        <li>
+                            <a href="#A09-10" class="people-list-item list-item" onclick="mainModule.expandMenu(10)">Sales/Account manager</a>
+                        </li>
+                        <li>
+                            <a href="#A09-11" class="people-list-item list-item" onclick="mainModule.expandMenu(11)">PM</a>
+                        </li>
+                        <li>
+                            <a href="#A09-12" class="people-list-item list-item" onclick="mainModule.expandMenu(12)">TeamLead</a>
+                        </li>
+                        <li>
+                            <a href="#A09-13" class="people-list-item list-item" onclick="mainModule.expandMenu(13)">HR</a>
+                        </li>
+                        <li>
+                            <a href="#A09-14" class="people-list-item list-item" onclick="mainModule.expandMenu(14)">Developer</a>
+                        </li>
+                        <li>
+                            <a href="#A09-15" class="people-list-item list-item" onclick="mainModule.expandMenu(15)">InfoDev</a>
+                        </li>
+                        <li>
+                            <a href="#A09-16" class="people-list-item list-item" onclick="mainModule.expandMenu(16)">Recruiter (5 cards)</a>
+                        </li>
+                        <li>
+                            <a href="#A09-17" class="people-list-item list-item" onclick="mainModule.expandMenu(17)">CEO</a>
+                        </li>
+                        <li>
+                            <a href="#A09-18" class="people-list-item list-item" onclick="mainModule.expandMenu(18)">PO</a>
+                        </li>
+                        <li>
+                            <a href="#A09-19" class="people-list-item list-item" onclick="mainModule.expandMenu(19)">Admin</a>
+                        </li>
+                        <li>
+                            <a href="#A09-20" class="people-list-item list-item" onclick="mainModule.expandMenu(20)">Competence manager</a>
+                        </li>
+                        <li>
+                            <a href="#A09-21" class="people-list-item list-item" onclick="mainModule.expandMenu(21)">QA</a>
+                        </li>
+                        <li>
+                            <a href="#A09-22" class="people-list-item list-item" onclick="mainModule.expandMenu(22)">Designer</a>
+                        </li>
+                        <li>
+                            <a href="#A09-23" class="people-list-item list-item" onclick="mainModule.expandMenu(23)">BA</a>
+                        </li>
+                        <li>
+                            <a href="#A09-24" class="people-list-item list-item" onclick="mainModule.expandMenu(24)">Recruiter</a>
+                        </li>
+                        <li>
+                            <a href="#A09-25" class="people-list-item list-item" onclick="mainModule.expandMenu(25)">R&D</a>
+                        </li>
+                        <li>
+                            <a href="#A09-26" class="people-list-item list-item" onclick="mainModule.expandMenu(26)">Trainee</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <article class="content">
+        <section class="item items">
+            <h2>
+                <p>
+                    <a id="A00">
+                        <small class="number">01</small>
+                        <strong> OBJECT</strong>
+                    </a>
+                </p>
+            </h2>
+            <div class="description">
+                <p>
+                    You are one of the IT specialists, trying to deliver your project to the Customer. Unfortunately, he is too busy to meet
+                    you, so you must rely on intermediaries to carry your proposal. During the game, you hold one secret
+                    card in your hand. This is who currently carries your proposal for the customer. Make sure that the person
+                    closest to the Customer holds your proposal at the end of the day, so it reaches him first!
+                </p>
+            </div>
+        </section>
+        <section class="item items">
+            <h2>
+                <p>
+                    <a id="A01">
+                        <small class="number">02</small>
+                        <strong>COMPONENTS</strong>
+                    </a>
+                </p>
+            </h2>
+            <div class="description">
+                <p>Your game iMolodets should include the following. If it does not, contact customerservice@ alderac.com for
+                    assistance.
+                </p>
+                <ul>
+                    <li>32 Game cards </li>
+                    <li>8 Player Reference cards</li>
+                    <li>25 tokens of victory</li>
+                    <li>1 R&D token</li>
+                    <li>1 Rulebook (this book)</li>
+                </ul>
+                <p></p>
+            </div>
+        </section>
+        <section class="item items">
+            <h2>
+                <p>
+                    <a id="A02">
+                        <small class="number">03</small>
+                        <strong>GAME CARDS</strong>
+                    </a>
+                </p>
+            </h2>
+            <div class="description">
+                <p>
+                    The game has 32 cards, 16 of which are used when playing with 2 to 4 players. The other 16 are added to the game when playing
+                    with 5 to 8 players. Each different card name represents someone at the IT company. Each card has a value
+                    in the upper left corner — the higher the number, the closer that person is to the Customer. At the bottom
+                    of each card, a text box describes the effect when the card is discarded.
+                </p>
+            </div>
+        </section>
+        <section class="item items">
+            <h2>
+                <p>
+                    <a id="A03">
+                        <small class="number">04</small>
+                        <strong>REFERENCE CARDS</strong>
+                    </a>
+                </p>
+            </h2>
+            <div class="description">
+                <p>
+                    YThese list the various cards in the game, as well as summarizing their effects and indicating how many copies are in the
+                    deck. They are not used in the game itself, but are provided as a memory aid for players. One side of
+                    each reference card summarizes the cards used in the 2 to 4 player game, while the other side summarizes
+                    the additional cards used in the 5 to 8 player game.
+                </p>
+            </div>
+        </section>
+        <section class="item items">
+            <h2>
+                <p>
+                    <a  id="A04">
+                        <small class="number">05</small>
+                        <strong>TOKENS OF VICTORY</strong>
+                    </a>
+                </p>
+            </h2>
+            <div class="description">
+                <p>
+                    Tokens are also included. These are used to track Customer’s ever-growing affection for those suitors whose proposals reach
+                    him.
+                </p>
+            </div>
+        </section>
+        <section class="item items">
+            <h2>
+                <p>
+                    <a id="A05">
+                        <small class="number">06</small>
+                        <strong>SETUP (2 to 4 Players)</strong>
+                    </a>
+                </p>
+            </h2>
+            <div class="description">
+                <p>If you are playing the game with 5 to 8 players, consult the setup and play rules on next pages. For 2 to
+                    4 players, assemble the following cards into a deck and place the others aside, as they won’t be used
+                    in the game:
+                </p>
+                <ul class="description-list">
+                    <li>Princess</li>
+                    <li>Countess</li>
+                    <li>King</li>
+                    <li>Prince (two copies)</li>
+                    <li>Handmaid (two copies)</li>
+                    <li>Baron (two copies)</li>
+                    <li>Priest (two copies)</li>
+                    <li>Guard (five copies)</li>
+                </ul>
+                <p>Shuffle these 16 cards to form a face-down draw deck. Remove the top card of the deck from the game without
+                    looking at it and place it aside. If you are playing a 2-player game, take 3 more cards from the top
+                    of the deck and place them to the side, face up. They will not be used during this round, but are available
+                    for all players to examine during the game. Each player draws 1 card from the deck. This is the player’s
+                    hand, and is kept secret from the other players.</p>
+            </div>
+        </section>
+        <section class="item items">
+            <h2>
+                <p>
+                    <a id="A06">
+                        <small class="number">07</small>
+                        <strong>HOW TO PLAY (2 to 4 Players)</strong>
+                    </a>
+                </p>
+            </h2>
+            <div class="description">
+                <p>
+                    iMolodets is played in a series of rounds. Each round represents one day. At the end of each round, one player’s proposal
+                    reaches Customer, and he
+                    <strong>considers</strong> it. When he get enough proposals from one
+                    <strong>suitor</strong>, he gets invitation and grants that
+                    <strong>suitor</strong> permission to start project. That player wins the game.
+                </p>
+                <p>Taking a turn </p>
+                <p>On your turn, draw the top card from the deck and add it to your hand. Then choose one of the two cards in
+                    your hand and discard it face up in front of you. Apply any effect on the card you discarded. You must
+                    apply its effect, even if it is bad for you. See next pages for the effects of each individual card.
+                    Likewise, if you have any questions about special cases regarding the card, you’ll find the answer there.
+                    All discarded cards remain in front of the player who discarded them. Overlap the cards so that it’s
+                    clear in which order they were discarded. This helps players to figure out which cards other players
+                    might be holding.</p>
+                <p>Once you finish applying the card’s effect, the turn passes to the player on your left.
+                </p>
+                <p>Out of the round</p>
+                <p>If a player is knocked out of the round, that player discards the card in his or her hand face up (do not
+                    apply the card’s effect) and takes no more turns until next round.
+                </p>
+                <p>Honesty </p>
+                <p>A player could cheat when chosen with the
+                    <strong>Recruiter</strong>, or fail to discard the
+                    <strong>Account Manager</strong> when that player has the
+                    <strong>PM</strong> or
+                    <strong>TeamLead</strong> in hand. We suggest that you don’t play with knaves who cheat at fun, light games.
+                </p>
+                <p>End of a round</p>
+                <p>A round ends if the deck is empty at the end of a turn. The IT company closes for the evening, the person
+                    closest to the Customer delivers the proposal, and Customer retires to his office to read it. All players
+                    still in the round reveal their hands. The player with the highest ranked person wins the round. In case
+                    of a tie, the player who discarded the highest total value of cards wins.
+                </p>
+                <p>A round also ends if all players but one are out of the round, in which case the remaining player wins.
+                </p>
+                <p>After a round ends, the winner (or winners, if there was a tie at the end of the round) receives a Token
+                    of victory. Shuffle all 16 cards together, and play a new round following all of the setup rules above.
+                    The winner of the previous round goes first, because the Customer speaks kindly of him or her at lunch.</p>
+                <p>Game End and How to Win (2 to 4 Players)</p>
+                <p>A player wins the game after winning a number of Tokens of Affection based on the number of players:
+                    </br>
+                    2 Players 7 tokens </br>
+                    3 Players 5 tokens </br>
+                    4 Players 4 tokens </br>
+                </p>
+            </div>
+        </section>
+        <section class="item items">
+            <h2>
+                <p>
+                    <a id="A07">
+                        <small class="number">08</small>
+                        <strong>SETUP AND PLAY (5 to 8 players)</strong>
+                    </a>
+                </p>
+            </h2>
+            <div class="description">
+                <p>
+                    If you are playing the game with 5 to 8 players, then assemble all 32 of the cards into a deck. Shuffle them to form a face-down
+                    draw deck. Remove the top card of the deck from the game without looking at it and place it aside. Each
+                    player draws 1 card from the deck. Play now proceeds as it would for a 2 to 4 player game. However, note
+                    that in the 5-8 player game, when a card’s effect requires you to “Name a number”, that effect applies
+                    to all cards with that number. For example, if you name “4” as a result of the Recruiter’s effect, then
+                    it would affect both the QA and the HR, both of whom have a value of “4”.
+                </p>
+                <p>Game End and How to Win (5 to 8 Players)</p>
+                <p>A player wins 5 to 8 player games after winning 4 Tokens of victory. Because some of the cards used in the
+                    5-8 player version of the game make it possible to gain Tokens of victory in ways other than winning
+                    a round, it’s entirely possible that a player could win the game without ever having actually won a round.
+                    Such are business realities! It’s also possible that two (or more) players could “tie” in terms of winning
+                    the game, again because of some of the cards used in the 5-8 player version of the game. For example,
+                    say two players, Bob and Susan, remain in the game. Each has 3 Tokens of victory. In his discard pile,
+                    Bob has Admin (If this card is in your discard pile when you are out of the round, gain an Victory Token.).
+                    Susan plays a card that knocks Bob out of the round. This leaves Susan as the winner of the round, as
+                    she’s the last remaining player, so she gains a Token of victory. However, Bob points to the Admin with
+                    a smile when he’s eliminated, so he also gains a Token of Victory. Both players now have 4 Tokens of
+                    Victory, so they “tie” for the win. Therefore, Bob and Susan now play another round to break the tie.
+                </p>
+            </div>
+        </section>
+        <section class="item items">
+            <h2>
+                <p>
+                    <a id="A08">
+                        <small class="number">09</small>
+                        <strong>ABOUT THE PEOPLE</strong>
+                    </a>
+                </p>
+            </h2>
+            <div class="description">
+                <p></p>
+                <div class="people-block items">
+                    <img alt="Customer picture" class="people-img choosen-item" src="images/people/customer.png">
+                    <a id="A09-9" class="people-name">8 - Customer</a>
+                    <p>If you discard the Customer — no matter how or why— he has tossed your proposal into the rubbish bin.
+                        You are immediately knocked out of the round. If the Customer was discarded by a card effect, any
+                        remaining effects of that card do not apply (you do not draw a card from the TeamLead, for example).
+                        Effects tied to being knocked out the round still apply (eg. Admin, R&D), however.</p>
+                </div>
+                <div class="people-block items">
+                    <img alt="Sales/Account manager picture" class="people-img" src="images/people/sales.png">
+                    <a id="A09-10" class="people-name">7 - Sales/Account manager</a>
+                    <p>Unlike other cards, which take effect when discarded, the text on the Sales/Account Manager applies while
+                        he is in your hand. In fact, the only time it doesn’t apply is when you discard him. If you ever
+                        have the Sales/Account Manager and either the PM or TeamLead in your hand, you must discard the Sales/Account
+                        Manager. You do not have to reveal the other card in your hand. Of course, you can also discard the
+                        Sales/Account Manager even if you do not have mentioned cards in your hand. The Sales/Account Manager
+                        likes to play mind games....
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="PM picture" class="people-img" src="images/people/pm.png">
+                    <a id="A09-11" class="people-name">6 - PM</a>
+                    <p>When you discard PM, trade the card in your hand with the card held by another player of your choice.
+                        You cannot trade with a player who is out of the round.
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="TeamLead picture" class="people-img" src="images/people/team-lead.png">
+                    <a id="A09-12" class="people-name">5 - TeamLead</a>
+                    <p>When you discard TeamLead, choose one player still in the round (including yourself). That player discards
+                        his or her hand (but doesn’t apply its effect, unless it is the Customer, see Customer’s rules) and
+                        draws a new one. If the deck is empty and the player cannot draw a card, that player draws the card
+                        that was removed at the start of the round. If all other players are protected by the HR, you must
+                        choose yourself.
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="HR picture" class="people-img" src="images/people/hr.png">
+                    <a id="A09-13" class="people-name">4 - HR</a>
+                    <p>When you discard the HR, you are immune to the effects of other players’ cards until the start of your
+                        next turn. If all players other than the player whose turn it is are protected by the HR, the player
+                        must choose him- or herself for a card’s effects, if possible.</p>
+                </div>
+                <div class="people-block items">
+                    <img alt="Developer picture" class="people-img" src="images/people/group.png">
+                    <a id="A09-14" class="people-name">3 - Developer</a>
+                    <p>When you discard the Developer, choose another player still in the round. You and that player secretly
+                        compare your hands. The player with the lower number is knocked out of the round. In case of a tie,
+                        nothing happens.
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="InfoDev picture" class="people-img" src="images/people/infodev.png">
+                    <a id="A09-15" class="people-name">2 - InfoDev</a>
+                    <p>When you discard the InfoDev, you can look at another player’s hand. Do not reveal the hand to any other
+                        players.
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="Recruiter picture" class="people-img" src="images/people/recruiter.png">
+                    <a id="A09-16" class="people-name">1 - Recruiter (5 cards)</a>
+                    <p>When you discard the Recruiter, choose a player and name a number (other than 1). If that player has
+                        that number in their hand, that player is knocked out of the round. If all other players still in
+                        the round cannot be chosen (eg. due to HR or QA), this card is discarded without effect.</p>
+                </div>
+
+                <div>
+                    <p class="separate_title">The following cards are used only in 5 to 8 player games:</p>
+                </div>
+
+                <div class="people-block items">
+                    <img alt="CEO picture" class="people-img" src="images/people/ceo.png">
+                    <a id="A09-17" class="people-name">9 - CEO</a>
+                    <p>Discarding the CEO allows you to name a number and a player. If the player has that number in their hand,
+                        you get a Token of victory. If this would give you enough Tokens to win the game, then you win immediately
+                        and the game ends. If you gained a Token of victory from this effect, then the player whose card
+                        you effectively revealed with the CEO may discard their card (but doesn’t apply its effects, unless
+                        it is the Customer, see Customer’s rules) and draw a new one. At the end of a round, despite his
+                        impressive 9, the Customer still beats the CEO when comparing the values of cards in players’ hands.
+                        He is considered to have a value of 9 for all other game effects, however
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="PO picture" class="people-img" src="images/people/po.png">
+                    <a id="A09-18" class="people-name">7 - PO</a>
+                    <p>When you discard the PO, choose another player still in the round. You and that player secretly compare
+                        your hands. The player with the higher number is knocked out of the round. In case of a tie, nothing
+                        happens.
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="Admin picture" class="people-img" src="images/people/admin.png">
+                    <a id="A09-19" class="people-name">6 - Admin</a>
+                    <p>The Admin is a somewhat unusual card, insofar as its effect applies not when discarded, like most cards,
+                        but when you are knocked out of the round with it in your discard pile. Should this happen, show
+                        the Admin, then claim a Token of victory. If this would give you enough Tokens to win the game, then
+                        you win immediately and the game ends.
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="Competence manager picture" class="people-img" src="images/people/comp-manager.png">
+                    <a id="A09-20" class="people-name">5 - Competence manager</a>
+                    <p>When the round ends, if it is necessary to check the number in the players’ hands to determine a winner,
+                        the Competence manager will increase that number by 1. Note that this stacks, so if you have both
+                        copies of the Competence manager in your discard pile, the number will increase by 2. In this case,
+                        the cards with a number of 7—the Sales/Account manager and the PO — would beat the Customer. If increasing
+                        the number of the card in your hand with the Competence manager would result in a tie for highest
+                        number in a player’s hand, then resolve ties normally, by adding the numbers of the cards in the
+                        discard pile of each tied player and comparing the totals.
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="QA picture" class="people-img" src="images/people/qa.png">
+                    <a id="A09-21" class="people-name">4 - QA</a>
+                    <p>When you discard the QA, choose a player (including yourself). Then, as long as the next card played
+                        has an effect that chooses one or more players, it has to at least choose the player you chose with
+                        the QA.
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="Designer picture" class="people-img" src="images/people/designer.png">
+                    <a id="A09-22" class="people-name">3 - Designer</a>
+                    <p>When you discard the Designer, you can look at the hands of either 1 or 2 other players. Do not reveal
+                        them to any other players.
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="BA picture" class="people-img" src="images/people/ba.png">
+                    <a id="A09-23" class="people-name">2 - BA</a>
+                    <p>When you discard the BA, choose exactly 2 players (you may include yourself), who will switch hands.
+                        Then, once the hands are switched, you may look at one of them without revealing it to any other
+                        players. If less than 2 players still in the round can be chosen, (eg. due to HR or QA), this card
+                        is discarded without effect.
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="Recruiter picture" class="people-img" src="images/people/recruiter.png">
+                    <a id="A09-24" class="people-name">1 - Recruiter</a>
+                    <p>When you discard the Recruiter, choose a player and name a number (other than 1). If that player has
+                        that number in their hand, that player is knocked out of the round. If all other players still in
+                        the round cannot be chosen (eg. due to HR or QA), this card is discarded without effect.</p>
+                </div>
+                <div class="people-block items">
+                    <img alt="R&D picture" class="people-img" src="images/people/rnd.png">
+                    <a id="A09-25" class="people-name">0 - R&D</a>
+                    <p>When you discard the R&D, choose another player—ideally, the one you believe is most likely to win the
+                        round. It’s helpful to place the R&D token provided in the game near the player you chose, so everyone
+                        remembers your choice. If you’re correct, and your chosen player does win the round, you gain a Token
+                        of victory. If this would give you enough Tokens to win the game, then you win immediately and the
+                        game ends.
+                    </p>
+                </div>
+                <div class="people-block items">
+                    <img alt="Trainee picture" class="people-img" src="images/people/trainee.png">
+                    <a id="A09-26" class="people-name">0 - Trainee</a>
+                    <p>This is a card whose effect only applies while it is in your hand. If another player chooses you when
+                        playing a Recruiter, then regardless of what number that player named (even 0!), when you reveal
+                        the Trainee (to all players), the Recruiter’s player is eliminated from the round, while you are
+                        not. Of course, all other players will now know that you have the Trainee in your hand. It would
+                        be both improper and dangerous to keep consorting with such an unsavory character, so after you’ve
+                        resolved the Trainee’s effect, you must discard him and draw a new card. If the deck is empty and
+                        you cannot draw a card, then draw the card that was removed at the start of the round.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </article>
+    <footer class="footer-block">
+        <p>	&copy; 2018 by
+            <a href="https://eleks.com" target="_blank">Eleks</a>, game not for sale. Based on board game
+            <a href="http://www.alderacsite.com/love-letter-home/" target="_blank">Love letter</a>
+        </p>
+    </footer>
+</body>
+
+</html>
