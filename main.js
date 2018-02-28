@@ -1,6 +1,6 @@
 
 var mainModule = (function () {
-  
+
     var domElements;
     window.onload = function () {
         domElements = {
@@ -21,7 +21,7 @@ var mainModule = (function () {
         domElements.peopleList.classList.add('people-menu-hide');
 
     };
- 
+
     function openMenu() {
         domElements.headerTitle.setAttribute("src", "images/logo/logo-rules-white.svg");
         domElements.headerBlock.classList.add('header-block-open-menu');
@@ -50,21 +50,21 @@ var mainModule = (function () {
         var extraScrollingSpaceMobile = 67,
             extraScrollingSpaceDesktop = 87,
             extraScrollingSpaceDesktopSubMenu = 95,
-           currentItemPosition =  domElements.allItems[index].offsetTop - 67;
+            currentItemPosition = domElements.allItems[index].offsetTop - 67;
 
         if (window.matchMedia("(min-width: 760px)").matches) {
-             currentItemPosition =  domElements.allItems[index].offsetTop - 87
+            currentItemPosition = domElements.allItems[index].offsetTop - 87
             if (index > 8) {
-                 currentItemPosition =  domElements.allItems[index].offsetTop - 95;
+                currentItemPosition = domElements.allItems[index].offsetTop - 95;
             }
         }
         return currentItemPosition;
     };
 
     function addColorToChosenItem(index) {
-        
+
         var element = domElements.navigationItems[index];
-  
+
         element.removeAttribute("href");
 
         for (i = 0; i < domElements.navigationItems.length; i++) {
@@ -81,12 +81,14 @@ var mainModule = (function () {
 
         addColorToChosenItem(index);
 
-        window.scrollTo({
-            behavior: 'smooth',
-            left: 0,
-            top: findScrollingvalue(index)
-        });
-        
+        // Add setTimeout to fixed srolling issue for IE
+        setTimeout(
+            window.scrollTo({
+                behavior: 'smooth',
+                left: 0,
+                top: findScrollingvalue(index)
+            }), 1);
+
         closeMenu();
     }
 
