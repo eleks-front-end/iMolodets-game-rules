@@ -82,13 +82,9 @@ ul, h1, li, h2 >p, a>p {
 .clicked-background{
     background-color: #0A3FAD;
 }
-#arrow-item {
-    display: flex;
-    justify-content: space-between;
-    padding-right: 16px;
-}
 .arrow {
     padding-top: 2px;
+    margin-left:30%;
     width: 14px;
     height: 9px;
 }
@@ -115,7 +111,7 @@ ul, h1, li, h2 >p, a>p {
 .list-number {
     width:20px;
     font-size: 12px;
-    margin-right: 25px;
+    margin-right: 16px;
 }
 .item{
     padding: 16px 16px 0 16px;
@@ -214,8 +210,7 @@ h2 {
     } 
     .expand-menu::-webkit-scrollbar {
         display: none;
-      }
-    
+    }
     .people-menu {
         display: block;
     }
@@ -241,8 +236,11 @@ h2 {
     .list-item  { 
         height:25px;
         display: flex;
-        align-items: center;
+     
         font-size: 16px;
+    }
+    .arrow {
+        margin-left:5%;
     }
     .content{
       top: 80px;
@@ -250,10 +248,8 @@ h2 {
       padding: 0 16px 16px 16px;
     }
     .list-number {
-        display: block;
         margin:0 32px 0 16px;
         font-size: 14px;
-        float: left;
     }
     .item{
         padding: 16px 16px 0 16px;
@@ -278,7 +274,7 @@ h2 {
         margin:0 16px 1px -16px;;
     }
     .people-list-item {
-        padding-left: 90px;
+        padding:16px 16px 16px 90px;
     }
     .separate_title{
         margin-left: 200px;
@@ -292,10 +288,7 @@ h2 {
         z-index: 2;
         background-color: #fff;
     }
-    #A00, #A01, #A02, #A03, #A04, #A05, #A06, #A07, #A08, #A09-9, #A09-10, 
-    #A09-11, #A09-12, #A09-13, #A09-14, #A09-15, #A09-16, 
-    #A09-17, #A09-18, #A09-19, #A09-20, #A09-21, #A09-22, #A09-23, #A09-24, #A09-25, #A09-26   { 
-        padding-top:100px;
+    a[name] {padding-top:98px;
     }
  
     @media all and (max-width: 1000px) {
