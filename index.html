@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>iMolodets board game rules</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <script src="main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <header class="header-block">
+        <button class="drop-btn" onclick="mainModule.showHideMenu()"></button>
+        <h1>
+            <a href="#top">
+                <img alt="iMolodets rules" src="images/logo/logo-rules-dark.svg" class="title-img">
+            </a>
+        </h1>
+    </header>
+    <aside>
+        <nav class="expand-menu">
+            <ul>
+                <li>
+                    <a href="#A00" class="list-item" onclick="mainModule.expandMenu(0)">
+                        <span class="navigation-list-number">01</span>
+                        <span>INTRODUCTION</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#A01" class="list-item" onclick="mainModule.expandMenu(1)">
+                        <span class="navigation-list-number">02</span>
+                        <span>HOW TO PLAY</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#A02" class="list-item" onclick="mainModule.expandMenu(2)">
+                        <span class="navigation-list-number">03</span>
+                        <span>ABOUT CARDS</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="content">
+        <section class="group-block">
+            <div class="description-block">
+                <h3>
+                    <a id="A00">YOUR IT TEAM</a>
+                </h3>
+                <p>wants to try and get the Customer to accept a proposal.</p>
+                <img alt="cards picture" id="people-picture" src="images/cards/asset.png">
+            </div>
+            <div class="description-block">
+                <h3>YOUR GOAL</h3>
+                <p>is to collect Tokens of Success, get in the Customer&apos;s favor, and be the one to present the proposal.</p>
+                <img alt="customer card" id="customer-picture" src="images/cards/asset_customer.png">
+            </div>
+            <div class="description-block">
+                <h3>RULES</h3>
+                <ol id="rules-list">
+                    <li>
+                        Draw cards from deck in turns clockwise and play their effects.
+                    </li>
+                    <li>
+                        At the end of each round, player with the biggest card number gets a Token of Success.
+                    </li>
+                    <li>
+                        Player with the needed amount of the Tokens of Success wins the game.
+                    </li>
+                </ol>
+            </div>
+        </section>
+       
+            <h2>LET&apos;S GET THE GAME STARTED!</h2>
+      
+        <section class="group-block">
+            <div class="description-block">
+                <h3> <a id="A01">PREPARATION  </a></h3>
+                <ol id="preparation-list">
+                    <li>Assemble the deck (16/32 cards). Shuffle the deck and put it face down.
+                        <div class="internal-listitem-block">
+
+                            <ul class="people-list">
+                                <li class="term-description">2–4 players (16 cards)</li>
+                                <li>Recruiter (5)</li>
+                                <li>HR (2)</li>
+                                <li>Customer (1)</li>
+                                <li>Information Developer (2)</li>
+                                <li>Software Developer (2)</li>
+                                <li>Project Manager (1)</li>
+                                <li>Account Manager (1)</li>
+                                <li>Team Leader (2)</li>
+                            </ul>
+
+                        </div>
+                        <div class="internal-listitem-block">
+                            <ul class="people-list">
+                                <li class="term-description">5–8 players (+16 cards)</li>
+                                <li>CEO (1)</li>
+                                <li>Trainee (1)</li>
+                                <li>Architect (1)</li>
+                                <li>Recruiter (3)</li>
+                                <li>R&amp;D Engineer (1)</li>
+                                <li>Business Analyst (2)</li>
+                                <li>UX Designer (2)</li>
+                                <li>QA Engineer (2</li>
+                                <li>DevOps Engineer (2)</li>
+                                <li>System Administrator (1)</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        Take 1 card from the deck and put it aside without looking at it. In case of 2 players, put aside 3 more cards face up. They
+                        will not be used during this round, but are available for all players to examine during the game.
+                    </li>
+                </ol>
+            </div>
+            <div class="description-block">
+                <h3>ROUND 1</h3>
+                <ol id="first-rounds">
+                    <li>
+                        Each player draws 1 card from the deck and looks at it. This card is your hand – keep it hidden from other players.
+                    </li>
+                    <li>
+                        You as the first player draw 1 more card from the deck. Now, you have 2 hands – examine their effects.
+                    </li>
+                    <li>
+                        Discard 1 of 2 hands face up in front of you. Play this card&apos;s effect, even if it&apos;s bad for you.
+                    </li>
+                    <li>
+                        Player to your left draws a card from the deck, and then discards 1 of their 2 hands, just like you did. And then, the next
+                        player to the left, and so on.
+                        <div class="internal-listitem-block">
+                            <p>
+                                <span class="term-description">KNOCKED OUT</span> – if you are knocked out of the round, discard your hand face up without
+                                playing its effect. Take no more turns till the end of the round. Effects related to being
+                                knocked out still apply (collecting a Token of Success for System Administrator or R&amp;D).</p>
+                        </div>
+                    </li>
+                    <li>
+                        Round ends when the deck is gone, or when all players except one are out of the round.
+                    </li>
+                    <li>
+                        All players reveal their hands. Hand with the biggest number wins the round and gets a Token of Success.
+                    </li>
+                </ol>
+                <div class="tip-block star">
+                    <p>= chance to talk to the Customer.</p>
+                </div>
+            </div>
+            <div class="description-block">
+                <h3>NEXT ROUNDS</h3>
+                <ol id="next-rounds">
+                    <li>
+                        Shuffle all cards and start a new round. Winner of the previous round starts the new round (because they are in favor of
+                        the Customer right now).
+                    </li>
+                    <li>
+                        Continue playing rounds till a player wins.
+                    </li>
+                </ol>
+        
+                <h3>SO WHO WINS?</h3>
+                <p>Winner is the one who talked to the Customer the most (collected the needed amount of the Tokens of Success).
+                    The needed amount depends on how many players there are:</p>
+                <div class="tip-block">
+                    <p>
+                        <span>7</span>tokens in the game of 2 players</p>
+                </div>
+                <div class="tip-block">
+                    <p>
+                        <span>5</span>tokens in the game of 3 players</p>
+                </div>
+                <div class="tip-block">
+                    <p>
+                        <span>4</span>tokens in the game of 4–8 players</p>
+                </div>
+                <div class="internal-listitem-block">
+                    <p>
+                        <span class="term-description">TIE</span> – at the end of the game, a tie may occur. E.g., Bob and Susan each have 3 Tokens of Success.
+                        They should play another round to break the tie.</p>
+                </div>
+                <div>
+                    <p>Got the needed number of Tokens? Congrats – you are the one who gets to present the proposal to the Customer!
+                    </p>
+                </div>
+            </div>
+        </section>
+        <div id="like-img">
+            <img alt="like" src="images/like.svg">
+        </div>
+        <h2>GET OUT THERE AND BECOME A PRO!</h2>
+        <section class="group-block">
+            <div class="description-block desktop-view">
+                <h3>
+                    <a id="A02">ABOUT CARDS &amp; EFFECTS</a>
+                </h3>
+                <div class="card-description">
+                    <h3>8 – Customer</h3>
+                    <p>If you discard the Customer – no matter how or why – the proposal is tossed into the rubbish bin. You
+                        are immediately knocked out of the round. </p>
+                </div>
+                <div class="card-description">
+                    <h3>7 – Account Manager</h3>
+                    <p>If you have this card + Project Manager or Team Leader in your hand, you must discard the Account Manager.
+                        You do not need to reveal that you have Project Manager or Team Leader. Actually, you can discard
+                        Account Manager even if you do not have those cards. Account Manager likes to play mind games...</p>
+                </div>
+                <div class="card-description">
+                    <h3>6 – Project Manager</h3>
+                    <p>Discard the PM, and then exchange your other hand with another player. If you&apos;re lucky, you&apos;ll
+                        get a better hand. That&apos;s the end of your turn – don&apos;t play the effect of your new hand
+                        just yet.
+                    </p>
+                </div>
+                <div class="card-description">
+                    <h3>5 – Team Leader</h3>
+                    <p>You can take away the power of any player&apos;s hand! The player who you choose (this can also be you)
+                        must discard their hand without playing its effect. If all other players are out or protected by
+                        the HR effect, you must choose yourself. The player who discarded their hand draws a new card. If
+                        the deck is empty, draw the card that was put aside at the start of the round.
+                    </p>
+                </div>
+                <div class="card-description">
+                    <h3>4 – HR</h3>
+                    <p>Your superpower is immunity. When you discard the HR, you can ignore the effects of other player&apos;s
+                        hands until the start of your next turn. E.g., you don’t need to discard your hand when another player
+                        chooses you as a part of the Team Leader effect. If you and the Team Leader are the only players
+                        left, then the Team Leader must discard their own card.</p>
+                </div>
+                <div class="card-description">
+                    <h3>3 – Software Developer</h3>
+                    <p>You have a chance to knock out your competitors! Choose another player and secretly compare hands. The
+                        player with the lower number is knocked out of the round. In case of a tie (both hands have the same
+                        number), nothing happens.</p>
+                </div>
+                <div class="card-description">
+                    <h3>2 – Information Developer</h3>
+                    <p>InfoDevs dig up all kinds of information. When you discard the InfoDev, you can look at another player&apos;s
+                        hand. You do not need to reveal it to anyone – keep it a secret and use it to your advantage. </p>
+                </div>
+                <div class="card-description">
+                    <h3>1 – Recruiter</h3>
+                    <p>When you discard the Recruiter, choose a player and name a number other than 1. If the player&apos;s
+                        hand has that number, the player is knocked out of the round. However, there&apos;s a catch: if you
+                        choose a Trainee, no matter what number you name (even 0), you are knocked out of the round.
+                    </p>
+                </div>
+            </div>
+            <div class="description-block desktop-view">
+                <h3>THE CARDS BELOW ARE USED ONLY IN THE GAME OF 5–8 PLAYERS</h3>
+                <div class="card-description">
+                    <h3>9 – CEO</h3>
+                    <p>Choose a player and name a number other than 1. If the player&apos;s hand has that number, you get a
+                        Token of Success. If you guess right, the player may discard their card without playing its effect
+                        and draw a new card (with the exception of Customer). At the end of the round, when players compare
+                        hand numbers, CEO loses to the Customer despite the impressive number 9.</p>
+                </div>
+                <div class="card-description">
+                    <h3>7 – Architect</h3>
+                    <p>When you discard the Architect, choose another player and secretly compare hands. The player with the
+                        higher number is knocked out of the round. Yep, even though your number is lower, you are more important
+                        to the team. In case of a tie, nothing happens.</p>
+                </div>
+                <div class="card-description">
+                    <h3>6 – System Administrator</h3>
+                    <p>The Admin is a somewhat unusual card – its effect applies when you are knocked out of the round with
+                        this card in your discard pile. Means your hardware is in order. Go ahead and claim a Token of Success!</p>
+                </div>
+                <div class="card-description">
+                    <h3>5 – DevOps Engineer</h3>
+                    <p>This card is your secret advantage at the end of the round. When players compare hand numbers, DevOps
+                        in your discard pile increases your hand number by 1. This stacks: if you have 2 DevOps in your discard
+                        pile, increase your hand number by 2.
+                    </p>
+                </div>
+                <div class="card-description">
+                    <h3>4 – QA Engineer</h3>
+                    <p>This is a card with an effect like none other! When you discard the QA, name another player (or yourself).
+                        If the next card that is played (e.g., Recruiter) has an effect to choose one or more players, then
+                        the named player (or yourself) must be chosen during this effect. If all other players are out or
+                        protected by the HR effect, you must choose yourself.</p>
+                </div>
+                <div class="card-description">
+                    <h3>3 – UX Designer</h3>
+                    <p>You get an insight into your team like no other player. When you discard the Designer, you can look at
+                        the hands of 1 or 2 other players. Keep this information secret and use it to your advantage! </p>
+                </div>
+                <div class="card-description">
+                    <h3>2 – Business Analyst</h3>
+                    <p>When you discard the BA, choose 2 players (you may include yourself), and they will switch hands. After
+                        that, you can look at 1 of those hands without revealing it to other players. If less than 2 players
+                        can be chosen (e.g., all other players are protected by the HR effect), simply discard this hand.</p>
+                </div>
+                <div class="card-description">
+                    <h3>0 – R&amp;D Engineer</h3>
+                    <p>Prediction is definitely among your strong points! When you discard the R&amp;D Engineer, choose another
+                        player – ideally, the one you believe is likely to win the round. Give the R&amp;D token to that
+                        player, so that everyone remembers your choice. If the chosen player wins the round, you gain a Token
+                        of Success.
+                    </p>
+                </div>
+                <div class="card-description">
+                    <h3>0 – Trainee</h3>
+                    <p>You are a real dark horse in the game! If another player chooses you when playing a Recruiter, no matter
+                        what number that player names (even 0), the Recruiter’s player is knocked out of the round. Now,
+                        all players know your hand, so discard it and draw a new card. If the deck is empty, draw the card
+                        that was put aside at the start of the round.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="creators">
+        <ul class="people-list">
+            <li class="term-description">ELEKS team:</li>
+            <li>Anna Herasymovych,</li>
+            <li>Grygorii Nakonechnyi,</li>
+            <li>Lesia Zasadna,</li>
+            <li>Oleksandr Moklovych,</li>
+            <li>Anatolii Tyurkedji,</li>
+            <li>Kostyantyn Havrylyuk,</li>
+            <li>Andrii Hrynkiv</li>
+        </ul>
+    </div>
+    <footer class="footer-block">
+        <p> &copy; 2018 by
+            <a href="https://eleks.com" target="_blank">ELEKS</a>, board game.
+        </p>
+    </footer>
+</body>
+
+</html>
