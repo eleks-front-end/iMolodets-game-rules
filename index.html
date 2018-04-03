@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>iMolodets board game rules</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="main.css?123">
+    <link rel="stylesheet" type="text/css" href="main.css">
     <script src="main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -13,14 +13,20 @@
 <body>
     <header class="header-block">
         <button class="drop-btn" onclick="mainModule.showHideMenu()"></button>
-        <h1>
+        <h1 class="logo">
             <a href="#top">
-                <img alt="iMolodets rules" src="images/logo/logo-rules-dark.svg" class="title-img">
+                <img alt="iMolodets rules logo" src="images/logo/logo-rules-dark.svg" class="title-img">
             </a>
         </h1>
     </header>
     <aside>
         <nav class="expand-menu">
+            <div class="header-block-open-menu">
+                <button class="drop-btn-open" onclick="mainModule.showHideMenu()"></button>
+                <h2 class="logo">
+                    <img alt="iMolodets rules logo" src="images/logo/logo-rules-white.svg" class="title-img">
+                </h2>
+            </div>
             <ul>
                 <li>
                     <a href="#A00" class="list-item" onclick="mainModule.expandMenu(0)">
@@ -47,19 +53,19 @@
     </aside>
     <main class="content">
         <section class="group-block">
-            <div class="description-block">
+            <article class="description-block">
                 <h3>
                     <a id="A00">YOUR IT TEAM</a>
                 </h3>
                 <p>wants to try and get the Customer to accept a proposal.</p>
                 <img alt="cards picture" id="people-picture" src="images/cards/asset.png">
-            </div>
-            <div class="description-block">
+            </article>
+            <article class="description-block">
                 <h3>YOUR GOAL</h3>
                 <p>is to collect Tokens of Success, get in the Customer&apos;s favor, and be the one to present the proposal.</p>
                 <img alt="customer card" id="customer-picture" src="images/cards/asset_customer.png">
-            </div>
-            <div class="description-block">
+            </article>
+            <article class="description-block">
                 <h3>RULES</h3>
                 <ol id="rules-list">
                     <li>
@@ -72,14 +78,14 @@
                         Player with the needed amount of the Tokens of Success wins the game.
                     </li>
                 </ol>
-            </div>
+            </article>
         </section>
-       
-            <h2>LET&apos;S GET THE GAME STARTED!</h2>
-      
+        <h2>LET&apos;S GET THE GAME STARTED!</h2>
         <section class="group-block">
-            <div class="description-block">
-                <h3> <a id="A01">PREPARATION  </a></h3>
+            <article class="description-block">
+                <h3>
+                    <a id="A01">PREPARATION </a>
+                </h3>
                 <ol id="preparation-list">
                     <li>Assemble the deck (16/32 cards). Shuffle the deck and put it face down.
                         <div class="internal-listitem-block">
@@ -118,8 +124,8 @@
                         will not be used during this round, but are available for all players to examine during the game.
                     </li>
                 </ol>
-            </div>
-            <div class="description-block">
+            </article>
+            <article class="description-block">
                 <h3>ROUND 1</h3>
                 <ol id="first-rounds">
                     <li>
@@ -151,8 +157,8 @@
                 <div class="tip-block star">
                     <p>= chance to talk to the Customer.</p>
                 </div>
-            </div>
-            <div class="description-block">
+            </article>
+            <article class="description-block">
                 <h3>NEXT ROUNDS</h3>
                 <ol id="next-rounds">
                     <li>
@@ -163,7 +169,7 @@
                         Continue playing rounds till a player wins.
                     </li>
                 </ol>
-        
+
                 <h3>SO WHO WINS?</h3>
                 <p>Winner is the one who talked to the Customer the most (collected the needed amount of the Tokens of Success).
                     The needed amount depends on how many players there are:</p>
@@ -188,14 +194,14 @@
                     <p>Got the needed number of Tokens? Congrats – you are the one who gets to present the proposal to the Customer!
                     </p>
                 </div>
-            </div>
+            </article>
         </section>
         <div id="like-img">
             <img alt="like" src="images/like.svg">
         </div>
         <h2>GET OUT THERE AND BECOME A PRO!</h2>
         <section class="group-block">
-            <div class="description-block desktop-view">
+            <article class="description-block desktop-view">
                 <h3>
                     <a id="A02">ABOUT CARDS &amp; EFFECTS</a>
                 </h3>
@@ -250,8 +256,8 @@
                         choose a Trainee, no matter what number you name (even 0), you are knocked out of the round.
                     </p>
                 </div>
-            </div>
-            <div class="description-block desktop-view">
+            </article>
+            <article class="description-block desktop-view">
                 <h3>THE CARDS BELOW ARE USED ONLY IN THE GAME OF 5–8 PLAYERS</h3>
                 <div class="card-description">
                     <h3>9 – CEO</h3>
@@ -312,21 +318,21 @@
                         that was put aside at the start of the round.
                     </p>
                 </div>
-            </div>
+            </article>
         </section>
+        <article id="creators">
+            <h4 class="term-description">ELEKS team:</h4>
+            <ul class="people-list">
+                <li>Anatolii Tiurkedzhy,</li>
+                <li>Andrii Hrynkiv,</li>
+                <li>Anna Herasymovych,</li>
+                <li>Grygorii Nakonechnyi,</li>
+                <li>Kostyantyn Havrylyuk,</li>
+                <li>Lesia Zasadna,</li>
+                <li>Oleksandr Moklovych</li>
+            </ul>
+        </article>
     </main>
-    <div id="creators">
-        <ul class="people-list">
-            <li class="term-description">ELEKS team:</li>
-            <li>Anna Herasymovych,</li>
-            <li>Grygorii Nakonechnyi,</li>
-            <li>Lesia Zasadna,</li>
-            <li>Oleksandr Moklovych,</li>
-            <li>Anatolii Tyurkedji,</li>
-            <li>Kostyantyn Havrylyuk,</li>
-            <li>Andrii Hrynkiv</li>
-        </ul>
-    </div>
     <footer class="footer-block">
         <p> &copy; 2018 by
             <a href="https://eleks.com" target="_blank">ELEKS</a>, board game.
