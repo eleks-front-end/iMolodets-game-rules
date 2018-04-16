@@ -250,6 +250,9 @@ a[id] {
         flex-wrap: wrap;
         justify-content: center;
     }
+    .group-block h2 {
+        width: 100%;
+    }
     .description-block {
         margin:2% 3%; 
         width: 25%;
