@@ -1,6 +1,5 @@
 html{
-    overflow-x: scroll;
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 }
 body{
     margin: 0;
@@ -11,7 +10,7 @@ body{
     flex-direction: column;
     line-height: 1.5;
 }
-ul,  ol, h3, li, h2 > p, a> p, p {
+* {
     padding: 0;
     margin: 0;
 }
